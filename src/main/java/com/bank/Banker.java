@@ -1,11 +1,12 @@
 package com.bank;
 
 import javax.swing.*;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 
 public class Banker {
     public static final String SAVINGS = "Savings";
-    public static final String CD = "Certificate of Deposit";
+    public static final String CD = "CertificateOfDeposit";
     public static final String CHECKING = "Checking";
     private static ArrayList<Account> allAccounts = new ArrayList<>();
 
@@ -27,32 +28,36 @@ public class Banker {
             Object accountType = JOptionPane.showInputDialog(null, "Choose an account to create",
                     "Choose an Account", JOptionPane.QUESTION_MESSAGE, null, availableAccounts, SAVINGS);
 
-            Account account = createAccount(accountType);
+            try {
+                Account account = createAccount(accountType);
 
-            String strAccountNumber = JOptionPane.showInputDialog("Enter account number");
-            int accountNumber = Integer.parseInt(strAccountNumber);
-            account.setAccountNumber(accountNumber);
+                String strAccountNumber = JOptionPane.showInputDialog("Enter account number");
+                int accountNumber = Integer.parseInt(strAccountNumber);
+                account.setAccountNumber(accountNumber);
 
-            String strBalance = JOptionPane.showInputDialog("Enter account balance");
-            double balance = Double.parseDouble(strBalance);
-            account.setBalance(balance);
+                String strBalance = JOptionPane.showInputDialog("Enter account balance");
+                double balance = Double.parseDouble(strBalance);
+                account.setBalance(balance);
 
-            String strInterest = JOptionPane.showInputDialog("Enter interest rate");
-            int interest = Integer.parseInt(strInterest);
-            account.setInterest(interest);
+                String strInterest = JOptionPane.showInputDialog("Enter interest rate");
+                int interest = Integer.parseInt(strInterest);
+                account.setInterest(interest);
 
-            String strPeriods = JOptionPane.showInputDialog("Enter number of periods");
-            int periods = Integer.parseInt(strPeriods);
-            account.setPeriods(periods);
+                String strPeriods = JOptionPane.showInputDialog("Enter number of periods");
+                int periods = Integer.parseInt(strPeriods);
+                account.setPeriods(periods);
 
-            if (accountType.toString().equals(CD)) {
-                CertificateOfDeposit cdAccount = (CertificateOfDeposit) account;
-                String strMaturity = JOptionPane.showInputDialog("Enter length to maturity");
-                int maturity = Integer.parseInt(strMaturity);
-                cdAccount.setMaturity(maturity);
+                if (accountType.toString().equals(CD)) {
+                    CertificateOfDeposit cdAccount = (CertificateOfDeposit) account;
+                    String strMaturity = JOptionPane.showInputDialog("Enter length to maturity");
+                    int maturity = Integer.parseInt(strMaturity);
+                    cdAccount.setMaturity(maturity);
+                }
+
+                allAccounts.add(account);
+            } catch (Exception exception){
+                System.out.println("Oops");
             }
-
-            allAccounts.add(account);
 
             goAgain = JOptionPane.showConfirmDialog(null, "Do you want to enter another account?",
                     "Go Again?", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
@@ -75,15 +80,7 @@ public class Banker {
      * @param selectedAccount A string representing the account we want to create.
      * @return the created account.
      */
-    public static Account createAccount(final Object selectedAccount) {
-        Account account = new Account();
-        if (selectedAccount.toString().equals(SAVINGS)) {
-            account = new Savings();
-        } else if (selectedAccount.toString().equals(CD)) {
-            account = new CertificateOfDeposit();
-        } else if (selectedAccount.toString().equals(CHECKING)) {
-            account = new Checking();
-        }
-        return account;
+    public static Account createAccount(final Object selectedAccount) throws ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
+        return Class.forName("com.bank." + selectedAccount.toString()).asSubclass(Account.class).getDeclaredConstructor().newInstance();
     }
 }

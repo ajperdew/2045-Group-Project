@@ -51,4 +51,13 @@ public class Account {
             balance += balance * (interest / 100.0);
         }
     }
+
+    /**
+     * Override toString() method to output account information in an informative and readable format
+     */
+    @Override
+    public String toString() {
+        return getClass().getSimpleName() + " account #" + getAccountNumber() + ": Interest Rate = " + getInterest() +
+                "%, Balance = $" + String.format("%.2f", getBalance());
+    }
 }
