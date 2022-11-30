@@ -58,6 +58,6 @@ public class Account {
     @Override
     public String toString() {
         return getClass().getSimpleName() + " account #" + getAccountNumber() + ": Interest Rate = " + getInterest() +
-                "%, Balance = $" + String.format("%.2f", getBalance());
+                "%, Periods = " + getPeriods() + ", Balance = $" + String.format("%.2f", getBalance());
     }
 }

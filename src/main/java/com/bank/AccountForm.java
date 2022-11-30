@@ -23,10 +23,10 @@ public class AccountForm {
     private JTextField txtPeriods;
     private JButton btnCompute;
     private JTextField txtMaturity;
-    private Vector<Account> allAccounts = new Vector<>();
+    private Vector<Account> allAccounts;
 
     public AccountForm() {
-
+        allAccounts = new Vector<>(InventoryReader.createAccount());
         initializeAccountTypeComboBox();
         lstAccounts.setListData(allAccounts);
 
@@ -42,6 +42,9 @@ public class AccountForm {
                 String strInterest = txtInterest.getText();
                 int interest = Integer.parseInt(strInterest);
 
+                String strPeriods = txtPeriods.getText();
+                int periods = Integer.parseInt(strPeriods);
+
                 String type = cmbAccountType.getSelectedItem().toString();
 
                 try {
@@ -50,6 +53,7 @@ public class AccountForm {
                     account.setAccountNumber(accountNumber);
                     account.setBalance(balance);
                     account.setInterest(interest);
+                    account.setPeriods(periods);
 
                     if (cmbAccountType.getSelectedItem().toString().equals(Banker.CD)) {
                         if (account instanceof CertificateOfDeposit) {
@@ -73,9 +77,7 @@ public class AccountForm {
                 txtInterest.setText(null);
                 txtBalance.setText(null);
                 txtMaturity.setText(null);
-
-                txtPeriods.setEnabled(true);
-                btnCompute.setEnabled(true);
+                txtPeriods.setText(null);
             }
         });
 
@@ -93,16 +95,13 @@ public class AccountForm {
         btnCompute.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String strPeriods = txtPeriods.getText();
-                int periods = Integer.parseInt(strPeriods);
-
                 allAccounts.stream().forEach(account -> {
-                    account.setPeriods(periods);
                     account.compute();
                 });
                 lstAccounts.updateUI();
             }
         });
+
     }
 
     private void initializeAccountTypeComboBox() {

@@ -1,0 +1,4 @@
+Checking,5,10000.0,10
+Savings,5,10000.0,10
+CertificateOfDeposit,5,10000.0,10
+Checking,10,20000.0,5

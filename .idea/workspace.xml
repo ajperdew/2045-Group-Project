@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93958594-556f-45f8-a4b6-803150dab2ce" name="Changes" comment="Individual Assignment Commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bank/AccountForm.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bank/AccountForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bank/InventoryReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bank/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bank/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bank/Banker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bank/Banker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bank/AccountForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bank/AccountForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bank/AccountForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bank/AccountForm.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,9 +48,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\audre\IdeaProjects\2045-individual-assignment-1-ajperdew" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\audre\IdeaProjects\2045-individual-assignment-1-ajperdew\src\main\java\com\bank" />
     </key>
@@ -92,6 +96,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="InventoryReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bank.InventoryReader" />
+      <module name="IndividualAssignment1_2045" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bank.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AccountTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IndividualAssignment1_2045" />
       <extension name="coverage">
@@ -103,22 +120,6 @@
       <option name="PACKAGE_NAME" value="com.bank.test" />
       <option name="MAIN_CLASS_NAME" value="com.bank.test.AccountTests" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AccountTests.certificateOfDeposit_setAndValidateTerm" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="IndividualAssignment1_2045" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.bank.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.bank.test" />
-      <option name="MAIN_CLASS_NAME" value="com.bank.test.AccountTests" />
-      <option name="METHOD_NAME" value="certificateOfDeposit_setAndValidateTerm" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -142,10 +143,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.AccountForm (1)" />
+        <item itemvalue="Application.InventoryReader" />
         <item itemvalue="Application.Banker" />
         <item itemvalue="JUnit.AccountTests" />
         <item itemvalue="JUnit.AccountTests.computeSavings_validate10Periods5Interest" />
-        <item itemvalue="JUnit.AccountTests.certificateOfDeposit_setAndValidateTerm" />
       </list>
     </recent_temporary>
   </component>
@@ -179,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663539049401</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Assignment 2 complete:&#10;Created AccountForm Swing form with AccountForm.form and AccountForm.java&#10;Added toString() override to Account class&#10;Updated createAccount method in Banker.java">
+      <created>1666559200417</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1666559200417</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -197,7 +205,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Individual Assignment Commit" />
     <MESSAGE value="Assignment 1 complete:&#10;Created Account superclass&#10;Created Savings, CertificateOfDeposit, and Checking subclasses&#10;Added promptUser() and displayOutput() methods to Banker" />
-    <option name="LAST_COMMIT_MESSAGE" value="Assignment 1 complete:&#10;Created Account superclass&#10;Created Savings, CertificateOfDeposit, and Checking subclasses&#10;Added promptUser() and displayOutput() methods to Banker" />
+    <MESSAGE value="Assignment 2 complete:&#10;Created AccountForm Swing form with AccountForm.form and AccountForm.java&#10;Added toString() override to Account class&#10;Updated createAccount method in Banker.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Assignment 2 complete:&#10;Created AccountForm Swing form with AccountForm.form and AccountForm.java&#10;Added toString() override to Account class&#10;Updated createAccount method in Banker.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
