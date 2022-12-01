@@ -33,6 +33,7 @@ public class AccountForm {
     private Vector<Account> allAccounts;
 
     public AccountForm() {
+        var allAccountNumbers = new Vector<Integer>();
         allAccounts = new Vector<>(InventoryReader.createAccount());
         initializeAccountTypeComboBox();
         //Possible data verification here...
@@ -44,6 +45,15 @@ public class AccountForm {
             public void actionPerformed(ActionEvent e) {
                 String strAccountNumber = txtAccountNumber.getText();
                 int accountNumber = Integer.parseInt(strAccountNumber);
+
+                allAccountNumbers.stream().forEach(accountNum -> {
+                    if (accountNum == accountNumber )
+                        throw new RuntimeException("Cannot do that!");
+                    else {
+                        allAccountNumbers.add(accountNumber);
+                    }
+                });
+
 
                 String strBalance = txtBalance.getText();
                 double balance = Double.parseDouble(strBalance);

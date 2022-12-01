@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="93958594-556f-45f8-a4b6-803150dab2ce" name="Changes" comment="Individual Assignment Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bank/AccountForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bank/AccountForm.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bank/AccountForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bank/AccountForm.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +57,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.com.bank.AccountForm (3)">
+  <component name="RunManager" selected="Application.com.bank.AccountForm (4)">
     <configuration name="AccountForm" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="AccountForm" />
       <module name="IndividualAssignment1_2045" />
@@ -105,7 +104,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.bank.AccountForm (5)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="com.bank.AccountForm (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.bank.AccountForm" />
       <module name="2045-Group-Project" />
       <extension name="coverage">
@@ -118,7 +117,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.bank.AccountForm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="com.bank.AccountForm (5)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.bank.AccountForm" />
       <module name="2045-Group-Project" />
       <extension name="coverage">
@@ -133,11 +132,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.com.bank.AccountForm (4)" />
         <item itemvalue="Application.com.bank.AccountForm (3)" />
         <item itemvalue="Application.com.bank.AccountForm (2)" />
         <item itemvalue="Application.com.bank.AccountForm (5)" />
         <item itemvalue="Application.com.bank.AccountForm (1)" />
-        <item itemvalue="Application.com.bank.AccountForm" />
       </list>
     </recent_temporary>
   </component>
