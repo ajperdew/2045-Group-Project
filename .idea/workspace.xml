@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93958594-556f-45f8-a4b6-803150dab2ce" name="Changes" comment="Individual Assignment Commit">
-      <change afterPath="$PROJECT_DIR$/accounts.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bank/InventoryReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bank/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bank/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bank/AccountForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bank/AccountForm.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bank/AccountForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bank/AccountForm.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,13 +42,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_opened_file_path": "C:/Users/Luke/Desktop/Java Final/2045-Group-Project"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\audre\IdeaProjects\2045-individual-assignment-1-ajperdew" />
@@ -64,8 +60,10 @@
   </component>
   <component name="RunManager" selected="Application.AccountForm (1)">
     <configuration name="AccountForm (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.bank.AccountForm" />
-      <module name="IndividualAssignment1_2045" />
+      <module name="2045-Group-Project" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.bank.*" />
@@ -97,8 +95,10 @@
       </method>
     </configuration>
     <configuration name="InventoryReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.bank.InventoryReader" />
-      <module name="IndividualAssignment1_2045" />
+      <module name="2045-Group-Project" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.bank.*" />
@@ -200,7 +200,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Individual Assignment Commit" />
@@ -219,6 +218,11 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="2" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/bank/InventoryReader.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

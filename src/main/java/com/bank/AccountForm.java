@@ -28,6 +28,8 @@ public class AccountForm {
     public AccountForm() {
         allAccounts = new Vector<>(InventoryReader.createAccount());
         initializeAccountTypeComboBox();
+        //Possible data verification here...
+        //allAccounts.forEach((n) -> System.out.println(n));
         lstAccounts.setListData(allAccounts);
 
         btnSave.addActionListener(new ActionListener() {
