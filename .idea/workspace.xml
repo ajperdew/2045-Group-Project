@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93958594-556f-45f8-a4b6-803150dab2ce" name="Changes" comment="Individual Assignment Commit">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bank/AccountForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bank/AccountForm.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bank/AccountForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bank/AccountForm.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,6 +43,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "446",
     "last_opened_file_path": "C:/Users/Luke/Desktop/Java Final/2045-Group-Project"
   }
 }]]></component>
@@ -58,10 +58,15 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AccountForm (1)">
-    <configuration name="AccountForm (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="11" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+  <component name="RunManager" selected="Application.com.bank.AccountForm (3)">
+    <configuration name="AccountForm" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AccountForm" />
+      <module name="IndividualAssignment1_2045" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.bank.AccountForm (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.bank.AccountForm" />
       <module name="2045-Group-Project" />
       <extension name="coverage">
@@ -74,30 +79,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountForm" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="AccountForm" />
-      <module name="IndividualAssignment1_2045" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Banker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.bank.Banker" />
-      <module name="IndividualAssignment1_2045" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.bank.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InventoryReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="11" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.bank.InventoryReader" />
+    <configuration name="com.bank.AccountForm (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bank.AccountForm" />
       <module name="2045-Group-Project" />
       <extension name="coverage">
         <pattern>
@@ -109,44 +92,52 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="IndividualAssignment1_2045" />
+    <configuration name="com.bank.AccountForm (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bank.AccountForm" />
+      <module name="2045-Group-Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.bank.test.*" />
+          <option name="PATTERN" value="com.bank.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.bank.test" />
-      <option name="MAIN_CLASS_NAME" value="com.bank.test.AccountTests" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountTests.computeSavings_validate10Periods5Interest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="IndividualAssignment1_2045" />
+    <configuration name="com.bank.AccountForm (5)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bank.AccountForm" />
+      <module name="2045-Group-Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.bank.test.*" />
+          <option name="PATTERN" value="com.bank.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.bank.test" />
-      <option name="MAIN_CLASS_NAME" value="com.bank.test.AccountTests" />
-      <option name="METHOD_NAME" value="computeSavings_validate10Periods5Interest" />
-      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.bank.AccountForm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bank.AccountForm" />
+      <module name="2045-Group-Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bank.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.AccountForm (1)" />
-        <item itemvalue="Application.InventoryReader" />
-        <item itemvalue="Application.Banker" />
-        <item itemvalue="JUnit.AccountTests" />
-        <item itemvalue="JUnit.AccountTests.computeSavings_validate10Periods5Interest" />
+        <item itemvalue="Application.com.bank.AccountForm (3)" />
+        <item itemvalue="Application.com.bank.AccountForm (2)" />
+        <item itemvalue="Application.com.bank.AccountForm (5)" />
+        <item itemvalue="Application.com.bank.AccountForm (1)" />
+        <item itemvalue="Application.com.bank.AccountForm" />
       </list>
     </recent_temporary>
   </component>
@@ -218,11 +209,6 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="2" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/bank/InventoryReader.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

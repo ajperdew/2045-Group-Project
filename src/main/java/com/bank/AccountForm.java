@@ -3,7 +3,10 @@ package com.bank;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Vector;
+import java.util.concurrent.atomic.AtomicReference;
 
 /**
  * UI form to collect and display information about user's bank accounts
@@ -23,6 +26,10 @@ public class AccountForm {
     private JTextField txtPeriods;
     private JButton btnCompute;
     private JTextField txtMaturity;
+    private JButton btnWithdraw;
+    private JButton btnCalculate;
+    private JTextField txtWithdraw;
+    private JTextField txtCurrentPeriodInterest;
     private Vector<Account> allAccounts;
 
     public AccountForm() {
@@ -97,10 +104,32 @@ public class AccountForm {
         btnCompute.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                AtomicReference<Double> beforeAmmount = new AtomicReference<>((double) 0);
+                allAccounts.stream().forEach(account -> {
+                    beforeAmmount.updateAndGet(v -> new Double((double) (v + account.getBalance())));
+                });
+                AtomicReference<Double> afterAmmount = new AtomicReference<>((double) 0);
                 allAccounts.stream().forEach(account -> {
                     account.compute();
+                    afterAmmount.updateAndGet(v -> new Double((double) (v + account.getBalance())));
                 });
+                txtCurrentPeriodInterest.setText(String.valueOf(afterAmmount.get() - beforeAmmount.get()));
                 lstAccounts.updateUI();
+            }
+        });
+        btnWithdraw.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String strWithdrawal = txtWithdraw.getText();
+                if (!strWithdrawal.isEmpty())
+                {
+                    int withdrawalAmt = Integer.parseInt(strWithdrawal);
+                    var lowestAccount = Collections.min(allAccounts, Comparator.comparing(s -> s.interest));
+                    var newBalance = lowestAccount.getBalance() - withdrawalAmt;
+                    lowestAccount.setBalance(newBalance);
+
+                    lstAccounts.updateUI();
+                }
             }
         });
 
