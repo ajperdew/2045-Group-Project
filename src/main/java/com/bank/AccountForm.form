@@ -37,6 +37,8 @@
             <colspec value="fill:d:grow"/>
             <colspec value="left:4dlu:noGrow"/>
             <colspec value="fill:max(d;4px):noGrow"/>
+            <colspec value="left:4dlu:noGrow"/>
+            <colspec value="fill:max(d;4px):noGrow"/>
             <constraints border-constraint="North"/>
             <properties/>
             <border type="none"/>
@@ -178,7 +180,7 @@
                   <forms/>
                 </constraints>
                 <properties>
-                  <text value="Current Period Interest:"/>
+                  <text value="Total Interest Earned"/>
                 </properties>
               </component>
               <component id="8d01f" class="javax.swing.JTextField" binding="txtCurrentPeriodInterest">
@@ -188,7 +190,18 @@
                   </grid>
                   <forms defaultalign-horz="false"/>
                 </constraints>
-                <properties/>
+                <properties>
+                  <editable value="false"/>
+                </properties>
+              </component>
+              <component id="701c" class="javax.swing.JButton" binding="btnLoad">
+                <constraints>
+                  <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <forms/>
+                </constraints>
+                <properties>
+                  <text value="Load"/>
+                </properties>
               </component>
             </children>
           </grid>
@@ -217,7 +230,7 @@
           <component id="c9e05" class="javax.swing.JButton" binding="btnSave">
             <constraints/>
             <properties>
-              <text value="Save"/>
+              <text value="Update and Save"/>
             </properties>
           </component>
           <component id="443a5" class="javax.swing.JButton" binding="btnCompute">

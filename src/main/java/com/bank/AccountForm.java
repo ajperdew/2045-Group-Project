@@ -30,12 +30,16 @@ public class AccountForm {
     private JButton btnCalculate;
     private JTextField txtWithdraw;
     private JTextField txtCurrentPeriodInterest;
-    private Vector<Account> allAccounts;
+    private JButton btnLoad;
+    private Vector<Account> allAccounts = new Vector<>();
+    private Account account;
+    private boolean existingAccount = false;
 
     public AccountForm() {
         var allAccountNumbers = new Vector<Integer>();
-        allAccounts = new Vector<>(InventoryReader.createAccount());
+
         initializeAccountTypeComboBox();
+        InventoryReader.createAccount();
         //Possible data verification here...
         //allAccounts.forEach((n) -> System.out.println(n));
         lstAccounts.setListData(allAccounts);
@@ -67,7 +71,9 @@ public class AccountForm {
                 String type = cmbAccountType.getSelectedItem().toString();
 
                 try {
-                    Account account = Banker.createAccount(type);
+                    if (!existingAccount) {
+                        account = Banker.createAccount(type);
+                    }
 
                     account.setAccountNumber(accountNumber);
                     account.setBalance(balance);
@@ -92,11 +98,8 @@ public class AccountForm {
 
                 lstAccounts.updateUI();
 
-                txtAccountNumber.setText(null);
-                txtInterest.setText(null);
-                txtBalance.setText(null);
-                txtMaturity.setText(null);
-                txtPeriods.setText(null);
+                existingAccount = false;
+                clearfields();
             }
         });
 
@@ -125,6 +128,8 @@ public class AccountForm {
                 });
                 txtCurrentPeriodInterest.setText(String.valueOf(afterAmmount.get() - beforeAmmount.get()));
                 lstAccounts.updateUI();
+
+                btnCompute.setEnabled(false);
             }
         });
         btnWithdraw.addActionListener(new ActionListener() {
@@ -143,6 +148,30 @@ public class AccountForm {
             }
         });
 
+        btnLoad.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String strAccountNumber = txtAccountNumber.getText();
+                int accountNumber = Integer.parseInt(strAccountNumber);
+
+                account = InventoryReader.fetchAccount(accountNumber);
+                existingAccount = true;
+
+                txtAccountNumber.setText("" + account.getAccountNumber());
+                txtInterest.setText(""+ account.getInterest());
+                txtBalance.setText("" + account.getBalance());
+                txtPeriods.setText("" + account.getPeriods());
+            }
+        });
+    }
+
+    private void clearfields() {
+        txtAccountNumber.setText(null);
+        txtInterest.setText(null);
+        txtBalance.setText(null);
+        txtMaturity.setText(null);
+        txtPeriods.setText(null);
+        txtWithdraw.setText(null);
     }
 
     private void initializeAccountTypeComboBox() {

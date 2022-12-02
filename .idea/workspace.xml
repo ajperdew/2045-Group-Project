@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93958594-556f-45f8-a4b6-803150dab2ce" name="Changes" comment="Individual Assignment Commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bank/AccountDeserializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bank/AccountForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bank/AccountForm.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bank/AccountForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bank/AccountForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bank/InventoryReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bank/InventoryReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,12 +45,9 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "446",
-    "last_opened_file_path": "C:/Users/Luke/Desktop/Java Final/2045-Group-Project"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Vehicles2022mvn" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\audre\IdeaProjects\2045-individual-assignment-1-ajperdew" />
@@ -57,7 +59,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.com.bank.AccountForm (4)">
+  <component name="RunManager" selected="Application.com.bank.AccountForm">
     <configuration name="AccountForm" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="AccountForm" />
       <module name="IndividualAssignment1_2045" />
@@ -65,9 +67,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.bank.AccountForm (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.bank.AccountForm" />
-      <module name="2045-Group-Project" />
+    <configuration name="InventoryReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bank.InventoryReader" />
+      <module name="IndividualAssignment1_2045" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.bank.*" />
@@ -117,9 +119,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.bank.AccountForm (5)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="com.bank.AccountForm" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.bank.AccountForm" />
-      <module name="2045-Group-Project" />
+      <module name="IndividualAssignment1_2045" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.bank.*" />
@@ -132,11 +134,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.com.bank.AccountForm" />
+        <item itemvalue="Application.InventoryReader" />
         <item itemvalue="Application.com.bank.AccountForm (4)" />
         <item itemvalue="Application.com.bank.AccountForm (3)" />
         <item itemvalue="Application.com.bank.AccountForm (2)" />
-        <item itemvalue="Application.com.bank.AccountForm (5)" />
-        <item itemvalue="Application.com.bank.AccountForm (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -190,6 +192,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Individual Assignment Commit" />
