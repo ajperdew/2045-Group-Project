@@ -1,15 +1,8 @@
 package com.bank;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Vector;
@@ -39,6 +32,7 @@ public class AccountForm {
     private JTextField txtWithdraw;
     private JTextField txtCurrentPeriodInterest;
     private JButton btnLoad;
+    private JButton btnRemove;
     private Vector<Account> allAccounts = new Vector<>();
     private Account account;
     private boolean existingAccount = false;
@@ -184,6 +178,17 @@ public class AccountForm {
                     cmbAccountType.getModel().setSelectedItem(Banker.CHECKING);
                 } else {
                     cmbAccountType.getModel().setSelectedItem(Banker.SAVINGS);
+                }
+            }
+        });
+        btnRemove.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int index = lstAccounts.getSelectedIndex();
+                if(index >= 0){
+                    allAccounts.remove(index);
+                    lstAccounts.updateUI();
+                    clearfields();
                 }
             }
         });
