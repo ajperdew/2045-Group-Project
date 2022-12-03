@@ -37,56 +37,6 @@ public class InventoryReader {
         }
     }
 
-//    public static void createAccount() {
-//
-//        Path inventoryFilePath = Paths.get("accounts.txt");
-//
-//
-//        try {
-//            List<String> inventoryLines = Files.readAllLines(inventoryFilePath);
-//
-//            for (String inventoryItem : inventoryLines) {
-//                String[] inventoryArray = inventoryItem.split(",");
-//
-//                if (inventoryArray.length >= 4) {
-//                    int accountNumber = inventoryLines.indexOf(inventoryItem);
-//
-//                    String accountType = inventoryArray[0];
-//
-//                    String strBalance = inventoryArray[2];
-//                    double balance = Double.parseDouble(strBalance);
-//
-//                    String strInterest = inventoryArray[1];
-//                    int interest = Integer.parseInt(strInterest);
-//
-//                    String strPeriods = inventoryArray[3];
-//                    int periods = Integer.parseInt(strPeriods);
-//
-//                    Account account = Banker.createAccount(accountType);
-//                    account.setAccountNumber(accountNumber);
-//                    account.setBalance(balance);
-//                    account.setInterest(interest);
-//                    account.setPeriods(periods);
-//
-//                    allAccounts.put(accountNumber, account);
-//                }
-//            }
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        } catch (InstantiationException e) {
-//            e.printStackTrace();
-//        } catch (InvocationTargetException e) {
-//            e.printStackTrace();
-//        } catch (NoSuchMethodException e) {
-//            e.printStackTrace();
-//        } catch (IllegalAccessException e) {
-//            e.printStackTrace();
-//        } catch (ClassNotFoundException e) {
-//            e.printStackTrace();
-//        }
-//
-//    }
-
     public static Account fetchAccount(int accountNumber) {
         return allAccounts.get(accountNumber);
     }

@@ -187,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670090926729</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fixed README Headers">
+      <created>1670091835542</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1670091835542</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -208,7 +215,8 @@
     <MESSAGE value="Assignment 2 complete:&#10;Created AccountForm Swing form with AccountForm.form and AccountForm.java&#10;Added toString() override to Account class&#10;Updated createAccount method in Banker.java" />
     <MESSAGE value="Refactored InventoryReader.java to read from Json file&#10;Added override toString method to CertificateOfDeposit.java to include maturity&#10;Updated AccountForm.java to initialize and prepopulate accounts.json data&#10;Improvements to UI form and Load Button" />
     <MESSAGE value="Added class diagram to README" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added class diagram to README" />
+    <MESSAGE value="Fixed README Headers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed README Headers" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
