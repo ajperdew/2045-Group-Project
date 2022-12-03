@@ -1,8 +1,15 @@
 package com.bank;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Vector;
@@ -42,6 +49,8 @@ public class AccountForm {
         InventoryReader.createAccount();
         //Possible data verification here...
         //allAccounts.forEach((n) -> System.out.println(n));
+
+        allAccounts.addAll(InventoryReader.getAllAccounts().values());
         lstAccounts.setListData(allAccounts);
 
         btnSave.addActionListener(new ActionListener() {
@@ -51,7 +60,7 @@ public class AccountForm {
                 int accountNumber = Integer.parseInt(strAccountNumber);
 
                 allAccountNumbers.stream().forEach(accountNum -> {
-                    if (accountNum == accountNumber )
+                    if (accountNum == accountNumber)
                         throw new RuntimeException("Cannot do that!");
                     else {
                         allAccountNumbers.add(accountNumber);
@@ -73,31 +82,34 @@ public class AccountForm {
                 try {
                     if (!existingAccount) {
                         account = Banker.createAccount(type);
+                        if (cmbAccountType.getSelectedItem().toString().equals(Banker.CD)) {
+                            if (account instanceof CertificateOfDeposit) {
+                                String strMaturity = txtMaturity.getText();
+                                int maturity = Integer.parseInt(strMaturity);
+
+                                CertificateOfDeposit certificateOfDeposit = (CertificateOfDeposit) account;
+                                certificateOfDeposit.setMaturity(maturity);
+                            }
+                        }
+                        allAccounts.add(account);
                     }
 
                     account.setAccountNumber(accountNumber);
                     account.setBalance(balance);
                     account.setInterest(interest);
                     account.setPeriods(periods);
-
-                    if (cmbAccountType.getSelectedItem().toString().equals(Banker.CD)) {
-                        if (account instanceof CertificateOfDeposit) {
-                            String strMaturity = txtMaturity.getText();
-                            int maturity = Integer.parseInt(strMaturity);
-
-                            CertificateOfDeposit certificateOfDeposit = (CertificateOfDeposit) account;
-                            certificateOfDeposit.setMaturity(maturity);
-                        }
+                    if (account instanceof CertificateOfDeposit) {
+                        String strMaturity = txtMaturity.getText();
+                        int maturity = Integer.parseInt(strMaturity);
+                        ((CertificateOfDeposit) account).setMaturity(maturity);
                     }
 
-                    allAccounts.add(account);
                 } catch (Exception exception) {
                     System.out.println("Oops");
                     exception.printStackTrace();
                 }
 
                 lstAccounts.updateUI();
-
                 existingAccount = false;
                 clearfields();
             }
@@ -132,12 +144,12 @@ public class AccountForm {
                 btnCompute.setEnabled(false);
             }
         });
+
         btnWithdraw.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String strWithdrawal = txtWithdraw.getText();
-                if (!strWithdrawal.isEmpty())
-                {
+                if (!strWithdrawal.isEmpty()) {
                     int withdrawalAmt = Integer.parseInt(strWithdrawal);
                     var lowestAccount = Collections.min(allAccounts, Comparator.comparing(s -> s.interest));
                     var newBalance = lowestAccount.getBalance() - withdrawalAmt;
@@ -158,9 +170,18 @@ public class AccountForm {
                 existingAccount = true;
 
                 txtAccountNumber.setText("" + account.getAccountNumber());
-                txtInterest.setText(""+ account.getInterest());
+                txtInterest.setText("" + account.getInterest());
                 txtBalance.setText("" + account.getBalance());
                 txtPeriods.setText("" + account.getPeriods());
+
+                if (account instanceof CertificateOfDeposit) {
+                    cmbAccountType.getModel().setSelectedItem(Banker.CD);
+                    txtMaturity.setText("" + ((CertificateOfDeposit) account).getMaturity());
+                } else if (account instanceof Checking) {
+                    cmbAccountType.getModel().setSelectedItem(Banker.CHECKING);
+                } else {
+                    cmbAccountType.getModel().setSelectedItem(Banker.SAVINGS);
+                }
             }
         });
     }

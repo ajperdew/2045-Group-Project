@@ -13,4 +13,14 @@ public class CertificateOfDeposit extends Account {
     public int getMaturity() {
         return maturity;
     }
+
+    /**
+     * Override toString() method to output account information in an informative and readable format including the
+     * extra maturity attribute associated with the CertificateOfDeposit subclass
+     */
+    @Override
+    public String toString() {
+        return getClass().getSimpleName() + " account #" + getAccountNumber() + ": Interest Rate = " + getInterest() +
+                "%, Periods = " + getPeriods() + ", Maturity = " + getMaturity() + ", Balance = $" + String.format("%.2f", getBalance());
+    }
 }

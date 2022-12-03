@@ -12,7 +12,7 @@ public class AccountDeserializer implements JsonDeserializer<Account> {
         String accountType = jsonObject.get("type").getAsString();
         JsonElement element = jsonObject.get("properties");
         try{
-            return jsonDeserializationContext.deserialize(element, Class.forName(accountType));
+            return jsonDeserializationContext.deserialize(element, Class.forName("com.bank." + accountType));
         } catch (ClassNotFoundException e){
             throw new JsonParseException(e);
         }

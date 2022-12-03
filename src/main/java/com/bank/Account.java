@@ -1,9 +1,11 @@
 package com.bank;
 
+import java.io.Serializable;
+
 /**
  * Represents a bank account with attributes balance, interest rate, and periods.
  */
-public class Account {
+public class Account implements Serializable {
 
     protected int accountNumber = 0;
     protected double balance = 0.0;
@@ -58,6 +60,6 @@ public class Account {
     @Override
     public String toString() {
         return getClass().getSimpleName() + " account #" + getAccountNumber() + ": Interest Rate = " + getInterest() +
-                "%, Periods = " + getPeriods() + ", Balance = $" + String.format("%.2f", getBalance());
+                "%, Periods = " + getPeriods() +  ", Balance = $" + String.format("%.2f", getBalance());
     }
 }
