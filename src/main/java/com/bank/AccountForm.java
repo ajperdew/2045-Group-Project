@@ -146,13 +146,28 @@ public class AccountForm {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String strWithdrawal = txtWithdraw.getText();
-                if (!strWithdrawal.isEmpty()) {
-                    int withdrawalAmt = Integer.parseInt(strWithdrawal);
-                    var lowestAccount = Collections.min(allAccounts, Comparator.comparing(s -> s.interest));
-                    var newBalance = lowestAccount.getBalance() - withdrawalAmt;
-                    lowestAccount.setBalance(newBalance);
-
+                int index = lstAccounts.getSelectedIndex();
+                int withdrawalAmt = Integer.parseInt(strWithdrawal);
+                if(index >= 0){
+                    var account = allAccounts.get(index);
+                    var newBalance = account.getBalance() - withdrawalAmt;
+                    if (newBalance < 0 )
+                    {
+                        txtErrors.setText("Account balance cannot be lower than 0!");
+                        newBalance = 0;
+                    }
+                    account.setBalance(newBalance);
                     lstAccounts.updateUI();
+                }
+                else
+                {
+                    if (!strWithdrawal.isEmpty()) {
+                        var lowestAccount = Collections.min(allAccounts, Comparator.comparing(s -> s.interest));
+                        var newBalance = lowestAccount.getBalance() - withdrawalAmt;
+                        lowestAccount.setBalance(newBalance);
+
+                        lstAccounts.updateUI();
+                    }
                 }
             }
         });
