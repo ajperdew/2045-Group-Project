@@ -33,6 +33,7 @@ public class AccountForm {
     private JTextField txtPeriods;
     private JButton btnCompute;
     private JTextField txtMaturity;
+    private JTextField txtErrors;
     private JButton btnWithdraw;
     private JButton btnCalculate;
     private JTextField txtWithdraw;
@@ -59,12 +60,14 @@ public class AccountForm {
                 String strAccountNumber = txtAccountNumber.getText();
                 int accountNumber = Integer.parseInt(strAccountNumber);
 
-                allAccountNumbers.stream().forEach(accountNum -> {
-                    if (accountNum == accountNumber)
-                        throw new RuntimeException("Cannot do that!");
-                    else {
-                        allAccountNumbers.add(accountNumber);
+                allAccounts.stream().forEach(account -> {
+                    if (account.accountNumber == accountNumber)
+                    {
+                        txtErrors.setText("Cannot add duplicate account number!");
+                        existingAccount = true;
                     }
+                    else
+                        txtErrors.setText(null);
                 });
 
 
