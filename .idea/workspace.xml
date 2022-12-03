@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93958594-556f-45f8-a4b6-803150dab2ce" name="Changes" comment="Individual Assignment Commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-    </list>
+    <list default="true" id="93958594-556f-45f8-a4b6-803150dab2ce" name="Changes" comment="Individual Assignment Commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,6 +19,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -182,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670045189104</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added class diagram to README">
+      <created>1670090926729</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670090926729</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -202,7 +207,8 @@
     <MESSAGE value="Assignment 1 complete:&#10;Created Account superclass&#10;Created Savings, CertificateOfDeposit, and Checking subclasses&#10;Added promptUser() and displayOutput() methods to Banker" />
     <MESSAGE value="Assignment 2 complete:&#10;Created AccountForm Swing form with AccountForm.form and AccountForm.java&#10;Added toString() override to Account class&#10;Updated createAccount method in Banker.java" />
     <MESSAGE value="Refactored InventoryReader.java to read from Json file&#10;Added override toString method to CertificateOfDeposit.java to include maturity&#10;Updated AccountForm.java to initialize and prepopulate accounts.json data&#10;Improvements to UI form and Load Button" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored InventoryReader.java to read from Json file&#10;Added override toString method to CertificateOfDeposit.java to include maturity&#10;Updated AccountForm.java to initialize and prepopulate accounts.json data&#10;Improvements to UI form and Load Button" />
+    <MESSAGE value="Added class diagram to README" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added class diagram to README" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
