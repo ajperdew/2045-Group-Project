@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93958594-556f-45f8-a4b6-803150dab2ce" name="Changes" comment="Individual Assignment Commit" />
+    <list default="true" id="93958594-556f-45f8-a4b6-803150dab2ce" name="Changes" comment="Individual Assignment Commit">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IndividualAssignment1_2045.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bank/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bank/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bank/AccountForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bank/AccountForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/bank/test/AccountTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/bank/test/AccountTests.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,62 +60,10 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.com.bank.AccountForm">
+  <component name="RunManager" selected="JUnit.AccountTests.computeChecking_validate10Periods5Interest">
     <configuration name="AccountForm" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="AccountForm" />
       <module name="IndividualAssignment1_2045" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InventoryReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.bank.InventoryReader" />
-      <module name="IndividualAssignment1_2045" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.bank.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="com.bank.AccountForm (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.bank.AccountForm" />
-      <module name="2045-Group-Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.bank.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="com.bank.AccountForm (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.bank.AccountForm" />
-      <module name="2045-Group-Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.bank.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="com.bank.AccountForm (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.bank.AccountForm" />
-      <module name="2045-Group-Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.bank.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -126,13 +81,77 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AccountTests.balance_IsNotNegative" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="IndividualAssignment1_2045" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bank.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bank.test" />
+      <option name="MAIN_CLASS_NAME" value="com.bank.test.AccountTests" />
+      <option name="METHOD_NAME" value="balance_IsNotNegative" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AccountTests.banker_createNewCheckingAccount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="IndividualAssignment1_2045" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bank.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bank.test" />
+      <option name="MAIN_CLASS_NAME" value="com.bank.test.AccountTests" />
+      <option name="METHOD_NAME" value="banker_createNewCheckingAccount" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AccountTests.banker_createNewSavingsAccount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="IndividualAssignment1_2045" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bank.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bank.test" />
+      <option name="MAIN_CLASS_NAME" value="com.bank.test.AccountTests" />
+      <option name="METHOD_NAME" value="banker_createNewSavingsAccount" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AccountTests.computeChecking_validate10Periods5Interest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="IndividualAssignment1_2045" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bank.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bank.test" />
+      <option name="MAIN_CLASS_NAME" value="com.bank.test.AccountTests" />
+      <option name="METHOD_NAME" value="computeChecking_validate10Periods5Interest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AccountTests.computeChecking_validate10Periods5Interest" />
+        <item itemvalue="JUnit.AccountTests.banker_createNewSavingsAccount" />
+        <item itemvalue="JUnit.AccountTests.balance_IsNotNegative" />
         <item itemvalue="Application.com.bank.AccountForm" />
-        <item itemvalue="Application.InventoryReader" />
-        <item itemvalue="Application.com.bank.AccountForm (4)" />
-        <item itemvalue="Application.com.bank.AccountForm (3)" />
-        <item itemvalue="Application.com.bank.AccountForm (2)" />
+        <item itemvalue="JUnit.AccountTests.banker_createNewCheckingAccount" />
       </list>
     </recent_temporary>
   </component>
@@ -207,16 +226,15 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Individual Assignment Commit" />
     <MESSAGE value="Assignment 1 complete:&#10;Created Account superclass&#10;Created Savings, CertificateOfDeposit, and Checking subclasses&#10;Added promptUser() and displayOutput() methods to Banker" />
     <MESSAGE value="Assignment 2 complete:&#10;Created AccountForm Swing form with AccountForm.form and AccountForm.java&#10;Added toString() override to Account class&#10;Updated createAccount method in Banker.java" />
     <MESSAGE value="Refactored InventoryReader.java to read from Json file&#10;Added override toString method to CertificateOfDeposit.java to include maturity&#10;Updated AccountForm.java to initialize and prepopulate accounts.json data&#10;Improvements to UI form and Load Button" />
     <MESSAGE value="Added class diagram to README" />
     <MESSAGE value="Fixed README Headers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed README Headers" />
+    <MESSAGE value="Individual Assignment Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Individual Assignment Commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

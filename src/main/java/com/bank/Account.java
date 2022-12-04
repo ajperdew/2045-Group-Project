@@ -15,34 +15,33 @@ public class Account implements Serializable {
     public int getAccountNumber() {
         return accountNumber;
     }
-
     public void setAccountNumber(int accountNumber) {
         this.accountNumber = accountNumber;
     }
 
-    public double getBalance() {
-        return balance;
-    }
 
+    public double getBalance() { return balance; }
     public void setBalance(double balance) {
         this.balance = balance;
     }
 
+
     public int getInterest() {
         return interest;
     }
-
     public void setInterest(int interest) {
         this.interest = interest;
     }
 
+
     public int getPeriods() {
         return periods;
     }
-
     public void setPeriods(int periods) {
         this.periods = periods;
     }
+
+
 
     /**
      * a) iterate over the number of periods,

@@ -108,7 +108,7 @@ public class AccountForm {
 
                 lstAccounts.updateUI();
                 existingAccount = false;
-                clearfields();
+                clearFields();
             }
         });
 
@@ -126,16 +126,16 @@ public class AccountForm {
         btnCompute.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                AtomicReference<Double> beforeAmmount = new AtomicReference<>((double) 0);
+                AtomicReference<Double> beforeAmount = new AtomicReference<>((double) 0);
                 allAccounts.stream().forEach(account -> {
-                    beforeAmmount.updateAndGet(v -> new Double((double) (v + account.getBalance())));
+                    beforeAmount.updateAndGet(v -> new Double((double) (v + account.getBalance())));
                 });
-                AtomicReference<Double> afterAmmount = new AtomicReference<>((double) 0);
+                AtomicReference<Double> afterAmount = new AtomicReference<>((double) 0);
                 allAccounts.stream().forEach(account -> {
                     account.compute();
-                    afterAmmount.updateAndGet(v -> new Double((double) (v + account.getBalance())));
+                    afterAmount.updateAndGet(v -> new Double((double) (v + account.getBalance())));
                 });
-                txtCurrentPeriodInterest.setText(String.valueOf(afterAmmount.get() - beforeAmmount.get()));
+                txtCurrentPeriodInterest.setText(String.valueOf(afterAmount.get() - beforeAmount.get()));
                 lstAccounts.updateUI();
 
                 btnCompute.setEnabled(false);
@@ -203,13 +203,13 @@ public class AccountForm {
                 if(index >= 0){
                     allAccounts.remove(index);
                     lstAccounts.updateUI();
-                    clearfields();
+                    clearFields();
                 }
             }
         });
     }
 
-    private void clearfields() {
+    private void clearFields() {
         txtAccountNumber.setText(null);
         txtInterest.setText(null);
         txtBalance.setText(null);
